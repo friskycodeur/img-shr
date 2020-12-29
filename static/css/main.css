@@ -1,0 +1,297 @@
+:root {
+  --main:#006d77;
+  --submain:#83c5be;
+  --gradient:#edf6f9;
+  --lightt:rgb(240, 219, 219);
+}
+
+body{
+  background-color: whitesmoke;
+}
+
+/* utilities */
+
+.btn-custom{
+  border:1px solid var(--submain);
+}
+.btn-custom:hover,.btn-custom:active{
+  background-color: var(--submain);
+}
+
+.tag{
+  background: var(--submain);
+  width: 6rem;
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+
+/* Navbar */
+.navbar-custom {
+  background-color: var(--main) !important;
+  font-size: 18px;
+  padding-bottom: 2px;
+}
+
+.navbar-nav.navbar-center { 
+  position: absolute; 
+  left: 50%; 
+  transform: translatex(-50%); 
+} 
+
+
+.nav-icon{
+  font-size: 20px;
+  font-weight: bold;
+  padding:5px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+
+/* Card */
+
+.card{
+  margin: 40px auto;
+  width: 300px;
+  height: 500px;
+  perspective: 1000px;
+  background-color: whitesmoke;
+  border: 0px;
+  position: relative;
+}
+
+.card__inner{
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card__inner:hover{
+  transform:rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+}
+
+.card__face--front{
+ background-image: linear-gradient(to bottom right ,var(--gradient),var(--submain));
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.card__face--front h2{
+  color: rgb(63, 62, 62);
+  font-size: 32px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 3px grey;
+}
+
+.card__face--back{
+  background-color: #fff;
+  transform:rotateY(180deg);
+
+}
+
+.card__content{
+  width: 100%;
+  height: 100%;
+
+}
+
+.card__header{
+  position: relative;
+  padding:30px 30px 40px;
+}
+
+.card__header:after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 0;
+  background-image: linear-gradient(to bottom left ,var(--gradient) 10%,var(--submain) 115%);
+
+}
+
+.image{
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  object-fit: cover;
+}
+
+.card__header h2{
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.card__body{
+  padding:30px;
+}
+
+.card__body h3{
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.card__body p{
+  color: #333;
+  font-size: 18px;
+}
+
+/* Player detail card */
+
+.stats-main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--submain);
+  margin: 2rem;
+  margin-left: 30rem;
+  text-align: center;
+  height: 110%;
+  width: 30%;
+  font-size: 22px;
+}
+
+/* Homepage */
+
+#showcase {
+  color: #fff;
+  background: var(--gradient);
+  padding: 2rem;
+  position: relative;
+}
+
+#showcase:before {
+  content: "";
+  background-image: linear-gradient(to bottom left ,#e29578,#edf6f9 );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+
+.home-card{
+  background-color:#83c5be !important;
+  border-radius: 70px;
+  padding: 2rem !important;
+  font-size: 20px;
+  color: #3f3f3f;
+  font-weight: bold; 
+}
+/* Login Page */
+
+.form-container {
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+  font-size: 1.1rem;
+  border: 2px dashed var(--submain);
+  max-width: 600px;
+}
+
+
+.form-container img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.btn-login {
+  width: 20%;
+  margin-top: -4rem;
+}
+
+.rem {
+  margin-bottom: 3rem;
+}
+
+.register {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+/* Post Form */
+
+.post-form{
+  background: #fff;
+  opacity: 0.8;
+  border-radius: 10px;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--submain);
+}
+
+
+/* Post card */
+
+.post-detail{
+  background-image: linear-gradient(to bottom left ,var(--main),var(--submain));
+  border-radius:15px;
+  margin: 3rem;
+  opacity: 0.9;
+  padding: 1rem;
+}
+
+/* Footer */
+footer{
+  display: flex;
+  background-color: var(--main);
+  width: 25%;
+  border: 1px solid #fff ;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-top: 10px;
+}
