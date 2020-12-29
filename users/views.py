@@ -9,7 +9,7 @@ def profile(request):
     if request.method=="POST":
         p_form=ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
 
-        if u_form.is_valid() and p_form.is_valid():
+        if p_form.is_valid():
             p_form.save()
             messages.success(request,f'You account has been updated.')
             return redirect('profile')

@@ -295,3 +295,19 @@ footer{
   border-top-right-radius: 10px;
   padding-top: 10px;
 }
+
+/* Profile */
+
+
+.media{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.account-img{
+  height: 125px;
+  width: 125px;
+  object-fit:cover;
+}

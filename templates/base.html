@@ -61,16 +61,16 @@
             <a class="nav-link waves-effect waves-light text-white-50" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-2x"></i> 
                 </a>
             <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
                 <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
             </div>
         </li>
         {% else %}
         <li class="nav-item mt-1">
-            <a class="nav-link mt-1 btn btn-light text-black-50 mr-0" href="{% url 'account_signup' %}">Sign Up</a>
+            <a class="nav-link mt-1 btn btn-light text-black-50 mr-0 font-weight-bold" href="{% url 'account_signup' %}">Sign Up</a>
         </li>
         <li class="nav-item mt-1">
-            <a class="nav-link mt-1 text-white-50 ml-0" href="{% url 'account_login' %}">Login</a>
+            <a class="nav-link mt-1 text-white-50 ml-0 font-weight-bold" href="{% url 'account_login' %}">Login</a>
         </li>
         {% endif %}
     </ul>
