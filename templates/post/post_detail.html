@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron m-3">
+<img src="{{ object.image.url }}" class="img-post"/>
+  <p class="card-text m-3">
+    <small class="text-muted"
+      >Posted by {{object.author}} on {{object.date_posted|date:"F d, Y"}}  </small
+    >
+{% if object.author == user %}
+<div class="text-left m-3">
+    <a class="btn btn-outline-success btn-sm" href="{% url 'post-update' object.id %}">Update</a>
+    <a class="btn btn-outline-danger btn-sm" href="{% url 'post-delete' object.id %}">Delete</a>
+</div>
+{% endif %}
+  </p>
+  <p class="card-text m-3">
+    {{object.caption}}
+  </p>
+</div>
+{% endblock content %}
